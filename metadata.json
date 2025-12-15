@@ -1,0 +1,8 @@
+{
+    "uuid": "rotation-lock-toggle@MVisobello",
+    "name": "Rotation Lock Toggle",
+    "description": "Toggle to enable or disable automatic screen rotation",
+    "icon": "screen-rotation-symbolic",
+    "version": 1,
+    "max-instances": 1
+}

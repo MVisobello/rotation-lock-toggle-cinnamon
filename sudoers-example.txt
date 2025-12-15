@@ -1,0 +1,7 @@
+# Example sudoers rule for Rotation Lock Toggle Cinnamon Applet
+# Replace USERNAME with your actual username
+#
+# Add this file using:
+#   sudo visudo -f /etc/sudoers.d/rotation-lock
+
+USERNAME ALL=(root) NOPASSWD: /bin/systemctl start iio-sensor-proxy, /bin/systemctl stop iio-sensor-proxy
