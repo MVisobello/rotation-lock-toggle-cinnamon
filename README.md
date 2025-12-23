@@ -12,6 +12,21 @@ controlling the `iio-sensor-proxy` system service.
 - The script starts/stops `iio-sensor-proxy`
 - A minimal sudoers rule is required (no password prompt)
 
+## Persistent rotation lock (important)
+
+Due to how systemd and udev manage hardware sensors, stopping
+`iio-sensor-proxy` at runtime is not sufficient to guarantee persistence
+across reboots.
+
+When rotation is locked, this applet masks the `iio-sensor-proxy` system
+service, preventing it from being automatically restarted at boot.
+
+Unlocking rotation will unmask and restart the service.
+
+This behavior is required to ensure reliable persistence on convertible
+devices.
+
+
 ## Requirements
 - Cinnamon desktop
 - iio-sensor-proxy
